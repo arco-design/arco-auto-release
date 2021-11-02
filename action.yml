@@ -1,0 +1,28 @@
+name: 'auto-release'
+description: 'a github actions to auto create release'
+author: 'Arco Team'
+inputs:
+  token:
+    required: true
+    description: the GITHUB_TOKEN
+  changelogPaths:
+    required: true
+    description: 'the file path to changeLog, If multiple use comma separated'
+  tagName:
+    required: true
+    description: The name of the tag associated with this release
+  ref:
+    description: 'github ref'
+    default: 'main'
+  headLevel:
+    default: '2'
+    description: Used to extract changelog, Title level in markdown. eg like `## version xxx`
+  draft:
+    description: 'true to create a draft (unpublished) release, false to create a published one.'
+    default: false
+  prerelease:
+    description: 'true to identify the release as a prerelease. false to identify the release as a full release.'
+    default: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

@@ -10,10 +10,6 @@ changelog: true
 
 - Add the first version
 
-## 1.0.1
-
-2021-11-02
-
 ### 💎 Optimization
 
 - Unified use the Camel-Case

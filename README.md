@@ -21,7 +21,7 @@ jobs:
 
       - name: create-release
         if: github.event.ref_type == 'tag'
-        uses: arco-actions/auto-release@master
+        uses: arco-design/auto-arco-release@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           changelogPaths: 'docs/changelog.en-US.md,docs/changelog.zh-CN.md'

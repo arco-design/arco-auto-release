@@ -1,6 +1,9 @@
-name: 'auto-release'
+name: 'auto-arco-release'
 description: 'a github actions to auto create release'
 author: 'Arco Team'
+branding:
+  icon: 'airplay'
+  color: 'green'
 inputs:
   token:
     required: true
